@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+</head>
+<body>
+    <form method="POST" data-th-action="@{/contact}" data-th-object="${user}">
+        <label for="name">Name</label>
+        <input type="text" data-th-field="*{name}">
+        <p th:errors="*{name}"></p>
+        <br>
+        <label for="name">Email</label>
+        <input type="email" data-th-field="*{email}">
+        <p th:errors="*{email}"></p>
+        <br>
+        <label for="name">Phone Number</label>
+        <input type="tel" data-th-field="*{phoneno}">
+        <p th:errors="*{phoneno}"></p>
+        </p>
+        <br>
+        <label for="name">Date of Birth</label>
+        <input type="date" data-th-field="*{dob}">
+        <p th:errors="*{dob}"></p>
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
